@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,9 +29,13 @@ Route::group(['middleware' => 'admin'],function(){
 Route::get('admin/dashboard',[DashboardController::class,'Dashboard']);
 
 
+//users
+Route::get('admin/users',[UserController::class,'index']);
+
+
 });
 
-Route::get('admin/dashboard',[DashboardController::class,'Dashboard']);
+
 
 
 Route::get('logout',[AuthController::class,'logout']);
