@@ -18,7 +18,15 @@
       <i class="bi bi-person"></i>
       <span>Users</span>
     </a>
-  </li><!-- End Dashboard Nav -->
+  </li><!-- End Users Nav -->
+
+  <li class="nav-item">
+    <a class="nav-link " href="{{ url('admin/products')}}">
+      <i class="bi bi-menu-button-wide"></i>
+      <span>Products</span>
+    </a>
+  </li><!-- End Products Nav -->
+
 
 
   <li class="nav-item">

@@ -56,7 +56,7 @@ $update =   User::find($id)->update([
 
 public function DeleteUser($id){
    $delete = User::find($id)->Delete();
-   return Redirect()->back()->with('success','About Deleted succcessfully');
+   return Redirect()->back()->with('success','User Deleted succcessfully');
 }
 
 

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +38,13 @@ Route::get('/admin/users/edit/{id}',[UserController::class,'EditUser']);
 Route::post('/admin/users/update/{id}',[UserController::class,'UpdateUser']);
 Route::get('/admin/users/delete/{id}',[UserController::class,'DeleteUser']);
 
+//Products
+Route::get('admin/products',[ProductController::class,'index']);
+Route::get('admin/products/add',[ProductController::class,'product_add']);
+Route::post('admin/products/add',[ProductController::class,'product_add_insert']);
+Route::get('/admin/products/edit/{id}',[ProductController::class,'EditProduct']);
+Route::post('/admin/products/update/{id}',[ProductController::class,'UpdateProduct']);
+Route::get('/admin/products/delete/{id}',[ProductController::class,'DeleteProduct']);
 
 
 });
