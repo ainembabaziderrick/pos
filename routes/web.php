@@ -31,6 +31,12 @@ Route::get('admin/dashboard',[DashboardController::class,'Dashboard']);
 
 //users
 Route::get('admin/users',[UserController::class,'index']);
+Route::get('admin/users/add',[UserController::class,'user_add']);
+Route::post('admin/users/add',[UserController::class,'user_add_insert']);
+Route::get('/admin/users/edit/{id}',[UserController::class,'EditUser']);
+Route::post('/admin/users/update/{id}',[UserController::class,'UpdateUser']);
+Route::get('/admin/users/delete/{id}',[UserController::class,'DeleteUser']);
+
 
 
 });
